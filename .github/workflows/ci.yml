@@ -15,5 +15,8 @@ jobs:
               run: npm i
             - name: Run tests
               run: npm run test
+            - name: Stop workflow on test failure
+              if: failure()
+              run: exit 1
             - name: Deploy
               run: echo Deployed
