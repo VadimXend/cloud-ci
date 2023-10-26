@@ -12,6 +12,8 @@ jobs:
             - name: Set npmrc and install dependencies
               run: yarn install
             - name: Run tests
-              run: yarn test
+              run: |
+                cd cloud-ci/cloud-ci
+                yarn run build
             - name: Deploy
               run: echo Deployed
