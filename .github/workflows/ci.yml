@@ -4,17 +4,16 @@ on:
       branches:
         - 'master'
 jobs:
-    testing:
+    ci-cd:
         runs-on: windows-latest
         steps:
+            - name: Init
+              uses: ./ 
             - name: Staring Node.js
               uses: actions/setup-node@v3
             - name: Set npmrc and install dependencies
               run: yarn install
             - name: Run tests
               run: yarn test
-    deploy:
-        runs-on: windows-latest
-        steps:
             - name: Deploy
               run: echo Deployed
