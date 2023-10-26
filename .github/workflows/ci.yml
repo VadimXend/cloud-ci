@@ -13,7 +13,7 @@ jobs:
               run: yarn install
             - name: Run tests
               run: |
-                cd cloud-ci/cloud-ci
+                ls
                 yarn run build
             - name: Deploy
               run: echo Deployed
