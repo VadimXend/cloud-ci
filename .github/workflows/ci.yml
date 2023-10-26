@@ -12,8 +12,8 @@ jobs:
             - name: Staring Node.js
               uses: actions/setup-node@v3
             - name: Set npmrc and install dependencies
-              run: yarn install
+              run: npm i
             - name: Run tests
-              run: yarn test
+              run: npm run test
             - name: Deploy
               run: echo Deployed
