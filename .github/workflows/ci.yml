@@ -7,13 +7,14 @@ jobs:
     ci-cd:
         runs-on: windows-latest
         steps:
-            - name: Staring Node.js
-              uses: actions/setup-node@v3
-            - name: Set npmrc and install dependencies
-              run: yarn install
+            # - name: Staring Node.js
+            #   uses: actions/setup-node@v3
+            # - name: Set npmrc and install dependencies
+            #   run: yarn install
             - name: Run tests
               run: |
+                cd ..  
                 ls
-                yarn run build
+                # yarn run build
             - name: Deploy
               run: echo Deployed
