@@ -7,8 +7,6 @@ jobs:
     ci-cd:
         runs-on: windows-latest
         steps:
-            - name: Init
-              uses: ./ 
             - name: Staring Node.js
               uses: actions/setup-node@v3
             - name: Set npmrc and install dependencies
