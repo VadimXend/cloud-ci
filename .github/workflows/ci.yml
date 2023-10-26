@@ -1,0 +1,20 @@
+name: ci
+on:
+    push:
+      branches:
+        - 'master'
+jobs:
+    testing:
+        runs-on: [github]
+        steps:
+            - name: Staring Node.js
+              uses: actions/setup-node@v3
+            - name: Set npmrc and install dependencies
+              run: yarn install
+            - name: Run tests
+              run: yarn test
+    deploy:
+        runs-on: [github]
+        steps:
+            - name: Deploy
+              run: echo Deployed
